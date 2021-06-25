@@ -11,8 +11,8 @@ char* ari(char *s){
 int num_letters = letters(s);
 int num_words = words(s);
 int num_sentences = sentences(s);
-
-int value = (round)(4.71*((double)num_letters/(double)num_words) + 0.5*((double)num_words/(double)num_sentences) -21.43);
+double x = 4.71*((double)num_letters/(double)num_words) + 0.5*((double)num_words/(double)num_sentences) -21.43;
+int value = round(x);
   
 switch(value){
   case 1: return "Kindergarten";
@@ -46,7 +46,7 @@ if(isalnum(s[i])) count++;
    
 int words(char *s){
 int len = strlen(s);
-int count = 1; 
+int count = -1; 
 for(int i = 0;i <len;i++)
 {
 if(isspace(s[i])) count++;
