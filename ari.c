@@ -1,11 +1,11 @@
 #include<math.h>
 #include<ctype.h>
 
-int letters(string s);
-int words(string s);
-int sentences(string s);
+int letters(char *s);
+int words(char *s);
+int sentences(char *s);
 
-string ari(string s){
+char* ari(char *s){
   
 int num_letter = letters(s);
 int num_words = words(s);
@@ -33,7 +33,7 @@ switch(value){
 return "";
 }
 
-int letters(string s){
+int letters(char *s){
 int len = strlen(s);
 int count = 0; 
 for(int i = 0;i <len;i++)
@@ -43,7 +43,7 @@ if(isalnum(s[i])) count++;
    return count;
 }
    
-int words(string s){
+int words(char *s){
 int len = strlen(s);
 int count = 1; 
 for(int i = 0;i <len;i++)
@@ -53,7 +53,7 @@ if(isspace(s[i])) count++;
    return count;
 }
 
-int sentences(string s){
+int sentences(char *s){
 int len = strlen(s);
 int count = 0; 
 for(int i = 0;i <len;i++)
