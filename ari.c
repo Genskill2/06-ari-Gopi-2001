@@ -1,5 +1,6 @@
 #include<math.h>
 #include<ctype.h>
+#include<string.h>
 
 int letters(char *s);
 int words(char *s);
@@ -7,7 +8,7 @@ int sentences(char *s);
 
 char* ari(char *s){
   
-int num_letter = letters(s);
+int num_letters = letters(s);
 int num_words = words(s);
 int num_sentences = sentences(s);
 
@@ -17,9 +18,9 @@ switch(value){
   case 1: return "Kindergarten";
   case 2: return "First/Second Grade";
   case 3: return "Third Grade";
-  case 4: return "Fourth Grade ":
+  case 4: return "Fourth Grade";
   case 5: return "Fifth Grade";
-  case 6: return "Sixth Grade":
+  case 6: return "Sixth Grade";
   case 7: return "Seventh Grade";
   case 8: return "Eighth Grade";
   case 9: return "Ninth Grade"; 
